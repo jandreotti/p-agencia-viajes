@@ -1,3 +1,4 @@
+console.log('Iniciando...');
 //! 1º importo express
 // Versiones Anteriores de JS -> SINTAXIS DE Common JS (ANTES NO HABIA MODULOS Y POR ESO SE USABA ESTO EN SU MOMENTO)
 //const express = require('express');
@@ -9,8 +10,8 @@ import db from './config/db.js';
 
 //! Conectar a la base de datos
 db.authenticate()
-    .then(() => console.log('Base de datos autenticada'))
-    .catch(error => console.log(error));
+  .then(() => console.log('Base de datos autenticada'))
+  .catch((error) => console.log(error));
 
 //! 2º Creo la variable de servidor.
 const app = express();
@@ -24,14 +25,14 @@ app.set('view engine', 'pug');
 
 //! 4º OPCIONAL -> Agregar un Middleware propio para calcular el año actual en el footer
 app.use((req, res, next) => {
-    //Creo la variable año y se la asigno a los locals de express. Esta variables que estan en locals estan disponible edesde las vistas de pug
-    const year = new Date();
-    res.locals.actualYear = year.getFullYear();
-    res.locals.nombresitio = 'Agencia de Viajes';
+  //Creo la variable año y se la asigno a los locals de express. Esta variables que estan en locals estan disponible edesde las vistas de pug
+  const year = new Date();
+  res.locals.actualYear = year.getFullYear();
+  res.locals.nombresitio = 'Agencia de Viajes';
 
-    //* Esta linea de abajo es importante para que se ejecute el siguiente middleware (Osea el de definir la carpeta publica.) Sino se clava ahi.
-    next();
-    // return next();
+  //* Esta linea de abajo es importante para que se ejecute el siguiente middleware (Osea el de definir la carpeta publica.) Sino se clava ahi.
+  next();
+  // return next();
 });
 
 //! 5º Agregar el middleware BODDY PARSER para leer los datos de un formulario
@@ -51,5 +52,5 @@ const host = process.env.HOST || '0.0.0.0';
 
 //! 9º Arranco el servidor en el puerto tanto. Y si arranca bien larga el mensaje.
 app.listen(port, host, () => {
-    console.log(`El servidor esta funcionando ${host}  --->  ${port}`);
+  console.log(`El servidor esta funcionando ${host}  --->  ${port}`);
 });
