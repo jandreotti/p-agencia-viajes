@@ -1,0 +1,39 @@
+//- EN HTML ->      <h1>Hola</h1>
+//- EN PUG  ->      h1 hola
+
+
+//- Para pasar una variable de JS son dos formas que significan lo mismo
+//- p= textoViajes 
+//- p #{textoViajes}
+
+//- Voy a usar todo lo que se encuentre en index (MASTER PAGE)
+extends ./layout/index
+
+//- Pero en el bloque que dice contenido en el archivo de arriba, voy a poner lo que esta indentado abajo
+block contenido
+    main.container.mt-5
+        .row
+            .col-md-5
+                img(src="/img/nosotros.jpg", alt="Imagen sobre nosotros",class="img-fluid")
+            .col-md-7
+                h1= pagina
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien neque, congue et varius sit amet, placerat quis sem. Vivamus vitae semper nisl. Duis ut maximus leo. Nulla non nibh condimentum, rutrum ex sed, ornare 
+                p Sed pretium, libero sed volutpat blandit, ligula neque ultrices felis, in sollicitudin magna mauris in odio. Phasellus nec sapien et metus vestibulum hendrerit eu a tortor. 
+                p Fusce ut justo sodales tortor laoreet venenatis. Ut erat ex, posuere eu elementum sit amet, ultrices eget ipsum. Vestibulum non urna sem. Pellentesque commodo quam mi, eget 
+    .listado-iconos
+        .container.mt-5.py-5.text-center
+            .row
+                .col-md-4
+                    img(src="img/icono_seguridad.svg", alt="Icono seguridad", class="img-fluid mb-4")
+                    h2.mb-4 Seguridad
+                    p volutpat blandit, ligula neque ultrices felis, in sollicitudin magna mauris in odio. Phasellus nec sapien et metus vestibul
+
+                .col-md-4
+                    img(src="img/icono_destinos.svg", alt="Icono Destino", class="img-fluid mb-4")
+                    h2.mb-4 Mejores Destinos
+                    p volutpat blandit, ligula neque ultrices felis, in sollicitudin magna mauris in odio. Phasellus nec sapien et metus vestibul
+
+                .col-md-4
+                    img(src="img/icono_precio.svg", alt="Icono Precio", class="img-fluid mb-4")
+                    h2.mb-4 los Mejores Precios
+                    p volutpat blandit, ligula neque ultrices felis, in sollicitudin magna mauris in odio. Phasellus nec sapien et metus vestibul
