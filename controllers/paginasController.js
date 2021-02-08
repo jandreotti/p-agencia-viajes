@@ -1,7 +1,7 @@
 //! EL CONTROLADOR ES EL QUE DICE QUE ES LO QUE SE TIENE QUE MOSTRAR
 
 import { Viaje } from '../models/Viaje.js';
-import { Testimonial } from '../models/Testimoniales.js';
+import { Testimonial } from '../Models/Testimoniales.js';
 
 const paginaInicio = async (request, response) => {
     //! request -> lo que enviamos del cliente al servidor de express  /// response -> lo que el servidor de express devuelve al cliente
