@@ -1,4 +1,4 @@
-console.log('Iniciando...');
+console.log('Iniciando...2');
 //! 1º importo express
 // Versiones Anteriores de JS -> SINTAXIS DE Common JS (ANTES NO HABIA MODULOS Y POR ESO SE USABA ESTO EN SU MOMENTO)
 //const express = require('express');
