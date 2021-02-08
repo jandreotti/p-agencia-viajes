@@ -1,6 +1,6 @@
 //! EL CONTROLADOR ES EL QUE DICE QUE ES LO QUE SE TIENE QUE MOSTRAR
 
-import { Viaje } from '../models/Viaje.js';
+import { Viaje } from '../Models/Viaje.js';
 import { Testimonial } from '../Models/Testimoniales.js';
 
 const paginaInicio = async (request, response) => {
